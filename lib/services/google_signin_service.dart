@@ -23,7 +23,11 @@ class GoogleSignInService {
           path: '/google');
 
       final session = await http
-          .post(signInWithGoogleEndpoint, body: {'token': googleKey.idToken});
+          .post(
+            signInWithGoogleEndpoint, 
+            body: {'token': googleKey.idToken
+          });
+          
       print('===== BACKEND =====');
       print(session.body);
 
