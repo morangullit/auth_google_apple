@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields, unused_local_variable, avoid_print
+
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
 
@@ -24,8 +26,8 @@ class GoogleSignInService {
 
       final session = await http
           .post(signInWithGoogleEndpoint, body: {'token': googleKey.idToken});
-      print('===== BACKEND =====');
-      print(session.body);
+      //print('===== BACKEND =====');
+      //print(session.body);
 
       return account;
 
